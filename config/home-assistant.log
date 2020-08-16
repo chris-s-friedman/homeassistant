@@ -1,0 +1,25 @@
+2020-08-15 15:59:57 DEBUG (SyncWorker_0) [homeassistant.util.yaml.loader] Secret pi_hole_api_key retrieved from secrets.yaml in folder /config
+2020-08-15 20:15:36 ERROR (SyncWorker_5) [homeassistant.util.yaml.loader] while parsing a block mapping
+  in "/config/configuration.yaml", line 3, column 1
+expected <block end>, but found '-'
+  in "/config/configuration.yaml", line 13, column 1
+2020-08-15 20:15:36 ERROR (MainThread) [homeassistant.components.homeassistant] Error loading /config/configuration.yaml: while parsing a block mapping
+  in "/config/configuration.yaml", line 3, column 1
+expected <block end>, but found '-'
+  in "/config/configuration.yaml", line 13, column 1
+2020-08-15 20:15:50 ERROR (SyncWorker_0) [homeassistant.util.yaml.loader] while parsing a block mapping
+  in "/config/configuration.yaml", line 3, column 1
+expected <block end>, but found '-'
+  in "/config/configuration.yaml", line 13, column 1
+2020-08-15 20:15:50 ERROR (MainThread) [homeassistant.components.homeassistant] Error loading /config/configuration.yaml: while parsing a block mapping
+  in "/config/configuration.yaml", line 3, column 1
+expected <block end>, but found '-'
+  in "/config/configuration.yaml", line 13, column 1
+2020-08-15 20:17:18 ERROR (SyncWorker_5) [homeassistant.util.yaml.loader] mapping values are not allowed here
+  in "/config/configuration.yaml", line 14, column 11
+2020-08-15 20:17:18 ERROR (MainThread) [homeassistant.components.homeassistant] Error loading /config/configuration.yaml: mapping values are not allowed here
+  in "/config/configuration.yaml", line 14, column 11
+2020-08-16 02:35:32 WARNING (Thread-7) [pychromecast.socket_client] [Chris's Bedroom speaker(192.168.0.100):8009] Heartbeat timeout, resetting connection
+2020-08-16 03:53:06 WARNING (Thread-6) [pychromecast.socket_client] [Office speaker(192.168.0.173):8009] Heartbeat timeout, resetting connection
+2020-08-16 04:01:26 WARNING (Thread-8) [pychromecast.socket_client] [Living Room speaker(192.168.0.118):8009] Heartbeat timeout, resetting connection
+2020-08-16 04:53:58 WARNING (Thread-9) [pychromecast.socket_client] [Chris's Bedroom TV(192.168.0.174):8009] Heartbeat timeout, resetting connection

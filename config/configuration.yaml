@@ -33,6 +33,7 @@ input_select:
 shell_command:
   pihole_enable: curl -X GET 'http://192.168.0.101/admin/api.php?enable&auth='
   pihole_disable: curl -X GET 'http://192.168.0.101/admin/api.php?disable={{ float(states.input_select.pihole_time.state)  * 60}}&auth='
+  pihole_status: curl -X GET 'http://192.168.0.101/admin/api.php?status'
 
 group: !include groups.yaml
 automation: !include automations.yaml

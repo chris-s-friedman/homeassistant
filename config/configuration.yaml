@@ -9,15 +9,6 @@ pi_hole:
   - host: "192.168.0.101"
     api_key: !secret pi_hole_api_key
 
-# platform: command_line
-#   - switches:
-#     - pihole_switch:
-#       - friendly_name: PiHole Switch
-#         command_on: "curl -X GET 'http://192.168.0.101/admin/api.php?enable&auth='"
-#         command_off: "curl -X GET 'http://192.168.0.101/admin/api.php?disable=60&auth='"
-#         command_state: "curl -X GET 'http://192.168.0.101/admin/api.php?status'"
-#         value_template: "{{ value_json.status == 'enabled' }}"
-
 input_select:
   pihole_time:
     name: Disable Time (minutes)

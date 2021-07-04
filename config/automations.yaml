@@ -21,27 +21,59 @@
     domain: light
     entity_id: light.vestibule_light_2
     type: turn_on
-# Custom pi-Hole stuff
 - alias: Disable Pi-Hole
   trigger:
     platform: state
     entity_id: input_select.pihole_time
   condition:
-    - condition: template
-      value_template: "{{ is_state('input_select.pihole_time', 'Select Time') == false}}"    
+  - condition: template
+    value_template: '{{ is_state(''input_select.pihole_time'', ''Select Time'') ==
+      false}}'
   action:
     service: shell_command.pihole_disable
+  id: b882adc328dc4821a918715cafb4b191
 - alias: Reset PiHole Disable Time
   trigger:
-    - platform: state
-      entity_id: script.enable_pihole
-    - platform: state
-      entity_id: sensor.pihole_status
-      from: 'disabled'
-      to: 'enabled'
+  - platform: state
+    entity_id: script.enable_pihole
+  - platform: state
+    entity_id: sensor.pihole_status
+    from: disabled
+    to: enabled
   action:
     service: input_select.select_option
     data:
       entity_id: input_select.pihole_time
       option: Select Time
-
+  id: e7f94e42500240f2914139b81ed07574
+- id: '1622600348095'
+  alias: Dim exterior lights before bed
+  description: dims the exterior lights at bedtime
+  trigger:
+  - platform: time
+    at: '23:00'
+  condition: []
+  action:
+  - scene: scene.dimmed_outdoor_lights
+  mode: single
+- id: '1622600651643'
+  alias: Turn off exterior lights at sunrise
+  description: ''
+  trigger:
+  - platform: sun
+    event: sunrise
+  condition: []
+  action:
+  - type: turn_off
+    device_id: e52a939ef3c9439dbd7d8fa58ae82236
+    entity_id: light.hue_white_lamp_1_6
+    domain: light
+  - type: turn_off
+    device_id: 5858c8af36e748229b0a60133cf58583
+    entity_id: light.hue_white_lamp_2_4
+    domain: light
+  - type: turn_off
+    device_id: 9b515446c8bc4ea198c44beeb4d2a45f
+    entity_id: light.vestibule_light_2
+    domain: light
+  mode: single

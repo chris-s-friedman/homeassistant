@@ -1,0 +1,18 @@
+- id: '1622600285737'
+  name: Dimmed outdoor lights
+  entities:
+    light.vestibule_light_2:
+      brightness: 3
+      friendly_name: Vestibule light
+      supported_features: 41
+      state: 'on'
+    light.hue_white_lamp_1_6:
+      brightness: 3
+      friendly_name: Back porch light door
+      supported_features: 41
+      state: 'on'
+    light.hue_white_lamp_2_4:
+      brightness: 3
+      friendly_name: Back porch light window
+      supported_features: 41
+      state: 'on'

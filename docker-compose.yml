@@ -5,6 +5,7 @@ services:
     image: homeassistant/home-assistant:stable
     volumes:
       - ./config:/config
+      - ~/drives/media:/media
     environment:
       - TZ=America/New_York
     restart: always

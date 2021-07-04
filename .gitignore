@@ -13,3 +13,6 @@ known_devices.yaml
 
 # Ignore db file that is wayyy to large for github
 *.db
+
+# Ignore log files
+*.log

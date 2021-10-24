@@ -15,4 +15,4 @@ known_devices.yaml
 *.db
 
 # Ignore log files
-*.log
+*.log*
